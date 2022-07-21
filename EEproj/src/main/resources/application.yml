@@ -1,0 +1,31 @@
+spring:
+#  mvc:
+#    static-path-pattern: /image/**
+  datasource:
+    url: jdbc:mysql://localhost:3306/eeproj
+    username: root
+    password: MYSQL
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      connection-test-query: SELECT 1 FROM DUAL
+      connection-timeout: 600000
+      maximum-pool-size: 500
+      max-lifetime: 1800000
+      minimum-idle: 20
+      validation-timeout: 3000
+      idle-timeout: 60000
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+#  web:
+#    resources:
+#      static-locations: file:D://files2//EES103//projImage/
+#  web:
+#    resources:
+#      static-locations: D://files2//EES103//image
+server:
+  port: 8181
+  address: 0.0.0.0
+
